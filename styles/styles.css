@@ -327,6 +327,10 @@ p.mobileMenu {
 @media (max-width: 480px) {
   .topBar .topMenu {
     display: none; }
+    .topBar .topMenu li {
+      margin-right: 5px; }
+      .topBar .topMenu li:last-of-type {
+        margin-right: 0; }
   p.mobileMenu {
     display: block;
     margin: 0; }
@@ -1267,7 +1271,7 @@ section.contactForm {
 /* Landscape phones and down */
 @media (max-width: 480px) {
   .wrapper {
-    max-width: 85%; }
+    max-width: 100%; }
   .items .item {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -1281,7 +1285,9 @@ section.contactForm {
   .sayAboutQuotes .quote {
     max-width: 80%; }
   .blogPosts .blogPost {
-    max-width: 75%; }
+    max-width: 85%; }
+  .blogPost figure figcaption {
+    padding: 30px 20px; }
   h2.darkTitles {
     font-size: 16px;
     letter-spacing: 1px; }
@@ -1289,4 +1295,10 @@ section.contactForm {
     font-size: 16px; }
   .sectionTitle p {
     font-size: 12px;
-    letter-spacing: 0; } }
+    letter-spacing: 0; }
+  .projects li {
+    padding: 5px 3px;
+    font-size: 12px; }
+  .newsLetter form input {
+    max-width: 80%;
+    padding: 20px 20px; } }

@@ -729,7 +729,7 @@ section.contactForm{
 /* Landscape phones and down */
 @media (max-width: 480px) {
 	.wrapper{
-		max-width: 85%;
+		max-width: 100%;
 	}
 	.items .item{
 		flex-direction: column;
@@ -747,7 +747,12 @@ section.contactForm{
 		max-width: 80%;
 	}
 	.blogPosts .blogPost{
-		max-width: 75%;
+		max-width: 85%;
+	}
+	.blogPost figure{
+		figcaption{
+			padding: 30px 20px;
+		}
 	}
 	h2.darkTitles{
 		font-size: 16px;
@@ -761,5 +766,13 @@ section.contactForm{
 			font-size: 12px;
 			letter-spacing: 0;
 		}
+	}
+	.projects li{
+		padding: 5px 3px;
+		font-size: 12px;
+	}
+	.newsLetter form input{
+		max-width: 80%;
+		padding: 20px 20px;
 	}
 }

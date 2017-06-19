@@ -196,6 +196,12 @@ p.mobileMenu{
 	.topBar{
 		.topMenu{
 			display: none;
+			li{
+				margin-right: 5px;
+				&:last-of-type{
+					margin-right: 0;
+				}
+			}
 		}
 	}
 	p.mobileMenu{
