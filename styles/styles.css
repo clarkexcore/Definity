@@ -1299,6 +1299,10 @@ section.contactForm {
   .projects li {
     padding: 5px 3px;
     font-size: 12px; }
+  .newsLetter form {
+    max-width: 100%; }
   .newsLetter form input {
-    max-width: 80%;
-    padding: 20px 20px; } }
+    max-width: 90%;
+    padding: 20px 15px;
+    margin: 0 auto;
+    margin-bottom: 20px; } }
