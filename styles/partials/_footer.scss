@@ -1,0 +1,191 @@
+section.footerSection{
+	background-color: black;
+	h4{
+		color: white;
+		margin-bottom: 15px;
+	}
+	a{
+		color: $fontGrey;
+	}
+	p{
+		font-size: 12px;
+	}
+}
+
+.columnFigures{
+	display: flex;
+	justify-content: space-between;
+	.figures{
+		width: calc(25% - 18px);
+	}
+}
+
+.figureLine{
+	margin-bottom: 20px;
+	max-width: 100%;
+	height: 1px;
+	background-color: $fontGrey;
+}
+
+
+.aboutSocial a{
+	margin-right: 10px;
+	font-size: 25px;
+	transition: all 0.5s;
+	&:hover{
+		color: white;
+	}
+}
+		// ABOUT US STYLING END
+
+.instaFeed{
+	display: flex;
+	flex-wrap: wrap;
+	img:hover{
+		filter: invert(75%);
+	}
+}
+
+		// INSTAFEED STYLING END
+
+.twitterFeed{
+	display: flex;
+	margin-bottom: 25px;
+	transition: all 0.5s;
+	p{
+		margin: 0
+	}
+	a{
+		padding: 5px;
+		transition: all 0.5s;
+		&:hover{
+			color: white;
+		}
+	}
+	span{
+		color: white;
+	}
+	&:hover{
+		background-color: #242424;
+	}
+	&:last-of-type{
+		margin-bottom: 0;
+	}
+}
+
+		// TWITTER FEED STYLING FINITO DAWG
+
+.submitEmail{
+	display: flex;
+	input{
+		padding: 10px 15px;
+		background-color: #242424;
+		border: none;
+		color: white;
+		flex: 1 0 auto;
+		&::placeholder{
+			font-size: 14px;
+		}
+	}
+	.letterEmail{
+		width: 50px;
+		height: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #353535;
+		transition: all 1s;
+		i{
+			color: $fontGrey;
+			font-size: 20px;
+		}
+		&:hover{
+			background-color: #5b5b5b;
+			i{
+				color: white;
+			}
+		}
+	}
+}
+
+		// NEWLETTER SIGN UP STYLING DONE
+
+
+footer{
+	background-color: #242424;
+	padding: 25px 0;
+	p{
+		margin: 0;
+		font-size: 12px;
+		font-family: $titles;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+	a{
+		font-size: 12px;
+		font-family: $titles;
+		color: $fontGrey;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+	.footerFlex{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+// END OF FOOTER YAYYYY!!!!
+
+// BEGINNING OF MEDIA QUERIES
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	.columnFigures{
+		flex-wrap: wrap;
+		justify-content: space-around;
+		.figures{
+			width: calc(50% - 30px);
+			margin-bottom: 15px;
+		}
+	}
+	.instaFeed{
+		width: 50%;
+		align-items: center;
+		justify-content: space-around;
+		margin: auto;
+	}
+	footer{
+		padding:25px 20px;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	.columnFigures{
+		.figures{
+			width: calc(100% - 30px);
+			margin-bottom: 15px;
+			margin-bottom: 25px;
+		}
+	}
+	.instaFeed{
+		width: 100%;
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.instaFeed{
+		width: 66.6%;
+	}
+	.instaFeed img{
+		flex-basis: 33.3%;
+	}
+	footer .footerFlex{
+		flex-direction: column;
+		p{
+			margin-bottom: 15px;
+		}
+	}
+}

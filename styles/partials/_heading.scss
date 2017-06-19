@@ -1,0 +1,226 @@
+h1{
+	margin: 0;
+	margin-bottom: 30px;
+	font-size: 120px;
+	font-family: $baseFont;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: white;
+	letter-spacing: 15px;
+}
+
+header{
+	height: 100vh;
+	background-image: url(..//images/hero.jpg);
+	background-size: cover;
+	background-position: center;
+	.heroOverlay{
+		height: 100vh;
+		padding: 20px 0;
+		position: relative;
+		width: 100%;
+		background-color: rgba(0,0,0,0.5);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}
+
+.devinityLogo{
+	margin-left: 130px;
+	align-self: flex-start;
+}
+
+p.mobileMenu{
+	display: none;
+}
+
+.topBar{
+	margin-right: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	.topMenu{
+		display: flex;
+		font-size: 10px;
+		.navMenu{
+			display: flex;
+			margin-right: 50px;
+
+		}
+		.cartSearch{
+			display: flex;
+		}
+		a{
+			color: $fontGrey;
+			letter-spacing: 1px;
+			&:hover{
+				color: white;
+				border-bottom: 2px solid white;
+			}
+		}
+		li{
+			margin-right: 15px;
+			position: relative;
+			&:last-of-type{
+				margin-right: 0;
+			}
+		}
+		i{
+			font-size: 13px;
+		}
+	}
+}
+
+// SUB MENU STYLING YO!
+
+.subMenu{
+	display: none;
+	background-color: rgba(0,0,0,0.5);
+	border-bottom: 2px solid white;
+	width: 150px;
+	position: absolute;
+	left: 0;
+	transition: all 0.3s;
+	li{
+		padding: 5px 2px;
+	}
+}
+
+.navMenu li:hover .subMenu{
+	display: block;
+	a{
+		border: 0;
+	}
+}
+
+
+
+// END OF SUBMENU STYLING YO!
+
+.heroText{
+	text-align: center;
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
+	p.heroP{
+		font-size: 15px;
+		font-family: $baseFont;
+		letter-spacing: 3px;
+		color: $fontGrey
+	}
+}
+
+.scroller{
+	align-self: center;
+}
+
+.arrows{
+	width: 60px;
+	height: 60px;
+	background-color: $greyB;
+	transition: all 0.5s;
+	&:hover{
+		background-color: #a3a3a3;
+		a{
+			color: white;
+		}
+	}
+}
+
+.absoluteArrows{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	.arrows{
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 1px;
+		a{
+			font-size: 20px;
+		}
+	}
+}
+
+// BEGINNING OF MEDIA QUERIES
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	.topBar{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 0;
+		.devinityLogo{
+			align-self: center;
+			margin-left: 0;
+			margin-bottom: 15px;
+		}
+		.topMenu{
+			align-self: center;
+			a{
+				color: #b5b5b5;
+			}
+			.navMenu{
+				margin: 0;
+			}
+			.cartSearch{
+				display: none;
+			}
+		}
+
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	.absoluteArrows{
+		display: none;
+	}
+	h1{
+		font-size: 80px;
+		letter-spacing: 5px;
+	}
+	p.heroP{
+		margin-top: 0;
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.topBar{
+		.topMenu{
+			display: none;
+		}
+	}
+	p.mobileMenu{
+		display:block;
+		margin: 0;
+		i{
+			font-size: 25px;
+			color: white;
+		}
+	}
+	ul.navMenu{
+		display:none;
+		text-align: center;
+		padding-top: 0;
+		li{
+			margin-top: 5px;
+		}
+	}
+	.subMenu{
+		display: none;	
+	}
+	h1{
+		font-size: 50px;
+	}
+	p{
+		font-size: 14px;
+	}
+}
